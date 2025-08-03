@@ -1,20 +1,34 @@
+/* Base Reset */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
   line-height: 1.6;
-  background-color: #f9f9f9; /* 🌿 Minimal clean background */
-  color: #222; /* Soft dark text */
 }
 
+a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Navbar */
+n/* Navbar */
 nav {
-  background-color: #ffffff;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #161b22;
+  padding: 1rem;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -22,16 +36,14 @@ nav {
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center-align navbar items */
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .logo {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #4b4bff;
+  display: none; /* Remove left Haritha logo */
 }
 
 .nav-links {
@@ -40,114 +52,77 @@ nav {
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #333;
+  color: #c9d1d9;
   font-weight: 500;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #4b4bff;
+  color: #58a6ff;
 }
 
 .menu-icon {
   display: none;
+  font-size: 1.5rem;
+  color: #c9d1d9;
   cursor: pointer;
-  font-size: 1.5rem;
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 70px;
-    right: 2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-}
-/* Hero Section */
-.hero-section {
-  background-color: #f0f8ff;
+/* Sections */
+.section {
   padding: 80px 20px;
-  text-align: center;
+  border-bottom: 1px solid #30363d;
 }
 
-.hero-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero-container h2 {
-  font-size: 1.5rem;
-  color: #555;
-  margin-bottom: 1rem;
-}
-
-.hero-container p {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
-
-.highlight {
-  color: #4b4bff;
-  font-weight: bold;
-}
-
-.cta-button {
-  text-decoration: none;
-  background-color: #4b4bff;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #3737d1;
-}
-/* About Section */
-.about-section {
-  background-color: #f0f8ff;
-  padding: 60px 20px;
-}
-
-.about-container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.about-container h2 {
+.section h2 {
   font-size: 2rem;
-  color: #4b4bff;
   margin-bottom: 1rem;
+  color: #58a6ff;
 }
 
-.about-container p {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
+/* Home Section */
+.home {
+  text-align: center;
 }
-html {
-  scroll-behavior: smooth;
+
+.home h1 {
+  font-size: 2.5rem;
+}
+
+.home h1 span {
+  color: #58a6ff;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #58a6ff;
+  color: #0d1117;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #1f6feb;
+}
+
+/* Skills List */
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-list li {
+  margin-bottom: 0.75rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #161b22;
+  color: #8b949e;
 }
